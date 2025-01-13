@@ -44,3 +44,5 @@ export const movies: Movie[] = [
     rating: 7.4
   }
 ];
+
+export default movies;

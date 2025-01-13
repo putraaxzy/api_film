@@ -1,6 +1,6 @@
 import MovieContainer from '@/components/MovieContainer';
 import Footer from '@/components/Footer';
-import { movies } from '@/data/movies'; // Import data statis
+import movies from '@/data/movies'; // Update this line
 
 export default function Home() {
   return (
