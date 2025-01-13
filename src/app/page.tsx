@@ -1,22 +1,8 @@
 import MovieContainer from '@/components/MovieContainer';
 import Footer from '@/components/Footer';
-import { Movie } from '@/types/movie';
+import { movies } from '@/data/movies'; // Import data statis
 
-async function getMovies(): Promise<Movie[]> {
-  const res = await fetch('http://localhost:3000/api/movies', {
-    cache: 'no-store'
-  });
-  
-  if (!res.ok) {
-    throw new Error('Failed to fetch movies');
-  }
-
-  return res.json();
-}
-
-export default async function Home() {
-  const movies = await getMovies();
-  
+export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">

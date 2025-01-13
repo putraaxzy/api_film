@@ -49,7 +49,7 @@ export default function DocsPage() {
             <div>
               <h3 className="font-semibold mb-2">Installation</h3>
               <pre className="bg-[var(--foreground)]/5 p-4 rounded-md overflow-x-auto">
-{`git clone <repository-url>
+{`git clone https://github.com/arundaya-project/api_film>
 cd api_prjkt
 npm install`}
               </pre>

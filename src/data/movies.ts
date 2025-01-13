@@ -1,6 +1,6 @@
 import { Movie } from '@/types/movie';
 
-const movies: Movie[] = [
+export const movies: Movie[] = [
   {
     id: 1,
     title: "Inception",
@@ -15,13 +15,4 @@ const movies: Movie[] = [
     releaseDate: "2008-07-18",
     rating: 9.0
   },
-  {
-    id: 3,
-    title: "Interstellar",
-    description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-    releaseDate: "2014-11-07",
-    rating: 8.6
-    },
 ];
-
-export default movies;
