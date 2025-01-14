@@ -24,7 +24,7 @@ export default function DocsPage() {
             <div className="border border-[var(--foreground)]/10 rounded-lg p-4">
               <h3 className="font-semibold mb-2">Tech Stack</h3>
               <ul className="list-disc list-inside text-[var(--foreground)]/60 space-y-1">
-                <li>Next.js 14 (App Router)</li>
+                <li>Next.js 15 (App Router)</li>
                 <li>TypeScript</li>
                 <li>Tailwind CSS</li>
                 <li>Lucide Icons</li>
@@ -49,7 +49,7 @@ export default function DocsPage() {
             <div>
               <h3 className="font-semibold mb-2">Installation</h3>
               <pre className="bg-[var(--foreground)]/5 p-4 rounded-md overflow-x-auto">
-{`git clone https://github.com/arundaya-project/api_film>
+{`git clone https://github.com/arundaya-project/api_film
 cd api_prjkt
 npm install`}
               </pre>

@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Movie } from '@/types/movie';
+import type { Movie } from '../types/movie';
 import MovieList from './MovieList';
 import { Search } from 'lucide-react';
 
