@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--background)] border-t border-gray-200/10">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          <div>
+    <footer className="w-full bg-[var(--background)] border-t border-gray-200/10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+          <div className="w-full max-w-xs">
             <h3 className="text-lg font-semibold text-[var(--foreground)] mb-3">
               Movie Collection
             </h3>
@@ -15,7 +15,7 @@ export default function Footer() {
             </p>
           </div>
           
-          <div>
+          <div className="w-full max-w-xs flex flex-col items-center text-center">
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-3">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/" className="text-[var(--foreground)]/60 hover:text-blue-500">Home</Link></li>
@@ -24,7 +24,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div>
+          <div className="w-full max-w-xs flex flex-col items-center md:items-start md:pl-16">
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-3">Follow Me!</h4>
             <div className="flex space-x-3">
               <a href="https://github.com/putraaxzy" className="text-[var(--foreground)]/60 hover:text-blue-500">
