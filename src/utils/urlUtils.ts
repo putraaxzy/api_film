@@ -1,3 +1,8 @@
+interface MovieType {
+  title: string;
+  [key: string]: any;
+}
+
 export function createSlug(text: string): string {
   return text
     .toLowerCase()
@@ -5,7 +10,7 @@ export function createSlug(text: string): string {
     .replace(/^-|-$/g, '');
 }
 
-export function getMovieBySlug(movies: any[], slug: string) {
+export function getMovieBySlug(movies: MovieType[], slug: string): MovieType | undefined {
   return movies.find(movie => createSlug(movie.title) === slug);
 }
 
