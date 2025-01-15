@@ -4,4 +4,5 @@ export interface Movie {
   description: string;
   releaseDate: string;
   rating: number;
+  image?: string; // Make image optional
 }
