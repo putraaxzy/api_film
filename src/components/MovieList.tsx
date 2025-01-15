@@ -2,12 +2,15 @@
 import Image from 'next/image';
 import type { Movie } from '../types/movie';
 import { Star, ImageOff } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 interface MovieListProps {
   movies: Movie[];
 }
 
 export default function MovieList({ movies }: MovieListProps) {
+  const router = useRouter();
+
   if (!movies?.length) {
     return <p className="text-center text-gray-500">No movies available</p>;
   }
@@ -23,11 +26,13 @@ export default function MovieList({ movies }: MovieListProps) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
       {movies.map((movie) => (
-        <div 
-          key={movie.id} 
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+        <div
+          key={movie.id}
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden 
+            transition-transform duration-200 hover:scale-105 cursor-pointer max-w-[280px]"
+          onClick={() => router.push(`/movie/${movie.id}`)}
         >
-          <div className="relative w-full aspect-[2/3]">
+          <div className="relative h-[400px]">
             {movie.image ? (
               <Image
                 src={movie.image}
@@ -44,18 +49,20 @@ export default function MovieList({ movies }: MovieListProps) {
             )}
           </div>
           <div className="p-3">
-            <h3 className="font-bold text-sm mb-1 line-clamp-1">{movie.title}</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-xs mb-2 line-clamp-2">
+            <h3 className="font-medium text-sm mb-1 text-gray-900 dark:text-white line-clamp-1">
+              {movie.title}
+            </h3>
+            <div className="flex items-center gap-3">
+              <Star className="h-3 w-3 text-yellow-500 fill-yellow-500" />
+              <span className="text-xs text-gray-600 dark:text-gray-300">
+                {movie.rating}/10
+              </span>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 line-clamp-3">
               {movie.description}
             </p>
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-500">
-                {formatDate(movie.releaseDate)}
-              </span>
-              <div className="flex items-center gap-1">
-                <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
-                <span className="font-medium">{movie.rating}</span>
-              </div>
+            <div className="text-xs text-gray-400 dark:text-gray-500">
+              Release: {formatDate(movie.releaseDate)}
             </div>
           </div>
         </div>
