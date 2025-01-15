@@ -3,6 +3,7 @@ import Image from 'next/image';
 import type { Movie } from '../types/movie';
 import { Star, ImageOff } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { createSlug } from '@/utils/urlUtils';
 
 interface MovieListProps {
   movies: Movie[];
@@ -30,7 +31,7 @@ export default function MovieList({ movies }: MovieListProps) {
           key={movie.id}
           className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden 
             transition-transform duration-200 hover:scale-105 cursor-pointer max-w-[280px]"
-          onClick={() => router.push(`/movie/${movie.id}`)}
+          onClick={() => router.push(`/movie/${createSlug(movie.title)}`)}
         >
           <div className="relative h-[400px]">
             {movie.image ? (
