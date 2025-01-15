@@ -19,7 +19,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-3">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/" className="text-[var(--foreground)]/60 hover:text-blue-500">Home</Link></li>
-              <li><Link href="/docs" className="text-[var(--foreground)]/60 hover:text-blue-500">Documentation</Link></li>
+              <li><Link href="/docs" className="text-[var(--foreground)]/60 hover:text-blue-500">API Documentation</Link></li>
               <li><a href="#" className="text-[var(--foreground)]/60 hover:text-blue-500">About</a></li>
             </ul>
           </div>
