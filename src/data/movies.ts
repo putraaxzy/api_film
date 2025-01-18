@@ -7,7 +7,14 @@ export const movies: Movie[] = [
     description: "A thief who steals corporate secrets through dream-sharing technology.",
     releaseDate: "2010-07-16",
     rating: 8.8,
-    image: "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg"
+    image: "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+    trailerYoutubeId: "YoHD9XEInc0",
+    duration: "2h 28m",
+    genre: ["Action", "Sci-Fi", "Thriller"],
+    director: "Christopher Nolan",
+    cast: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page", "Tom Hardy"],
+    language: "English",
+    production: "Warner Bros. Pictures"
   },
   {
     id: 2,
@@ -15,7 +22,14 @@ export const movies: Movie[] = [
     description: "Batman fights against organized crime in Gotham City.",
     releaseDate: "2008-07-18",
     rating: 9.0,
-    image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+    image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    trailerYoutubeId: "EXeTwQWrcwY",
+    duration: "2h 32m",
+    genre: ["Action", "Crime", "Drama", "Thriller"],
+    director: "Christopher Nolan",
+    cast: ["Christian Bale", "Heath Ledger", "Aaron Eckhart", "Michael Caine"],
+    language: "English",
+    production: "Warner Bros. Pictures"
   },
   {
     id: 3,
@@ -23,7 +37,14 @@ export const movies: Movie[] = [
     description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
     releaseDate: "2014-11-07",
     rating: 8.6,
-    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    trailerYoutubeId: "zSWdZVtXT7E",
+    duration: "2h 49m",
+    genre: ["Adventure", "Drama", "Sci-Fi"],
+    director: "Christopher Nolan",
+    cast: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Caine"],
+    language: "English",
+    production: "Paramount Pictures"
   },
   {
     id: 4,
@@ -31,7 +52,14 @@ export const movies: Movie[] = [
     description: "Two stage magicians engage in competitive one-upmanship in an attempt to create the ultimate stage illusion.",
     releaseDate: "2006-10-20",
     rating: 8.5,
-    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg"
+    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg",
+    trailerYoutubeId: "o4gHCmTQDVI",
+    duration: "2h 10m",
+    genre: ["Drama", "Mystery", "Thriller"],
+    director: "Christopher Nolan",
+    cast: ["Hugh Jackman", "Christian Bale", "Michael Caine", "Scarlett Johansson"],
+    language: "English",
+    production: "Warner Bros. Pictures"
   },
   {
     id: 5,
@@ -39,7 +67,14 @@ export const movies: Movie[] = [
     description: "Allied soldiers from Belgium, the British Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.",
     releaseDate: "2017-07-21",
     rating: 7.8,
-    image: "https://image.tmdb.org/t/p/w500/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg"
+    image: "https://image.tmdb.org/t/p/w500/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg",
+    trailerYoutubeId: "F-eMt3SrfFU",
+    duration: "1h 46m",
+    genre: ["War", "Action", "Drama", "History"],
+    director: "Christopher Nolan",
+    cast: ["Fionn Whitehead", "Tom Hardy", "Mark Rylance", "Harry Styles"],
+    language: "English",
+    production: "Warner Bros. Pictures"
   },
   {
     id: 6,
@@ -47,7 +82,14 @@ export const movies: Movie[] = [
     description: "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
     releaseDate: "2020-09-03",
     rating: 7.4,
-    image: "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg"
+    image: "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
+    trailerYoutubeId: "LdOM0x0XDMo",
+    duration: "2h 30m",
+    genre: ["Action", "Sci-Fi", "Thriller"],
+    director: "Christopher Nolan",
+    cast: ["John David Washington", "Robert Pattinson", "Elizabeth Debicki"],
+    language: "English",
+    production: "Warner Bros. Pictures"
   },
   {
     id: 7,
@@ -55,7 +97,14 @@ export const movies: Movie[] = [
     description: "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.",
     releaseDate: "2021-12-17",
     rating: 8.3,
-    image: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+    image: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    trailerYoutubeId: "JfVOs4VSpmA",
+    duration: "2h 28m",
+    genre: ["Action", "Adventure", "Sci-Fi"],
+    director: "Jon Watts",
+    cast: ["Tom Holland", "Zendaya", "Benedict Cumberbatch", "Jacob Batalon"],
+    language: "English",
+    production: "Sony Pictures"
   },
   {
     id: 8,
@@ -63,7 +112,14 @@ export const movies: Movie[] = [
     description: "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
     releaseDate: "2022-03-04",
     rating: 8.1,
-    image: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+    image: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    trailerYoutubeId: "mqqft2x_Aa4",
+    duration: "2h 56m",
+    genre: ["Action", "Crime", "Drama"],
+    director: "Matt Reeves",
+    cast: ["Robert Pattinson", "Zoë Kravitz", "Paul Dano", "Jeffrey Wright"],
+    language: "English",
+    production: "Warner Bros. Pictures"
   },
   {
     id: 9,
@@ -71,7 +127,14 @@ export const movies: Movie[] = [
     description: "After the events of Avengers: Endgame, Dr. Stephen Strange continues his research on the Time Stone. But an old friend turned enemy seeks to destroy every sorcerer on Earth, messing with Strange's plan and also causing him to unleash an unspeakable evil.",
     releaseDate: "2022-05-06",
     rating: 7.9,
-    image: "https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+    image: "https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
+    trailerYoutubeId: "aWzlQ2N6qqg",
+    duration: "2h 6m",
+    genre: ["Action", "Adventure", "Fantasy"],
+    director: "Sam Raimi",
+    cast: ["Benedict Cumberbatch", "Elizabeth Olsen", "Chiwetel Ejiofor", "Benedict Wong"],
+    language: "English",
+    production: "Marvel Studios"
   },
   {
     id: 10,
@@ -79,8 +142,45 @@ export const movies: Movie[] = [
     description: "Having lost his job and the company he built, a 36-year-old man at rock bottom goes on a wistful solo trip to Japan in search of the love he left behind.",
     releaseDate: "2024-03-14",
     rating: 8.1,
-    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nt68WTFgtZdLBwpLBF2q7GFq5Fw.jpg"
-  }
+    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nt68WTFgtZdLBwpLBF2q7GFq5Fw.jpg",
+    trailerYoutubeId: "snJpn2vsu4I",
+    duration: "1h 55m",
+    genre: ["Drama", "Romance"],
+    director: "Takashi Yamazaki",
+    cast: ["Shun Oguri", "Ayase Haruka", "Riko Narumi"],
+    language: "Japanese",
+    production: "Toho Pictures"
+  },
+  {
+    id: 11,
+    title: "Sekawan Limo",
+    description: "Five best friends try to find out what true friendship is by climbing Mount Semeru, the highest peak in Java.",
+    releaseDate: "2024-04-07",
+    rating: 7.5,
+    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/jLiHiQuZDXNOKp1iGMRqNpt8Kx8.jpg",
+    trailerYoutubeId: "oonlYlvItW0",
+    duration: "2h 10m",
+    genre: ["Drama", "Adventure"],
+    director: "Rizal Mantovani",
+    cast: ["Iqbaal Ramadhan", "Adipati Dolken", "Sheryl Sheinafia"],
+    language: "Indonesian",
+    production: "Falcon Pictures"
+  },
+  {
+    id: 12,
+    title: "Dancing Village: The Curse Begins",
+    description: "Mila must return a mystical bracelet to the Dancing Village, unaware that Badarawuhi - a mysterious, mythical being who rules the village - awaits her.",
+    releaseDate: "2024-04-11",
+    rating: 5.7,
+    image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/A4kY5RKiPJ0sRknU4NojItr93Jr.jpg",
+    trailerYoutubeId: "dkbwPpPJCLo",
+    duration: "2h 2mm",
+    genre: ["Horrors", "Mystery"],
+    director: "Lelle Laila",
+    cast: ["Auila Sarah", "Jourdy Pranata", "Maudy Effrosina"],
+    language: "Indonesian",
+    production: "MD Pictures"
+  },
 ];
 
 export default movies;

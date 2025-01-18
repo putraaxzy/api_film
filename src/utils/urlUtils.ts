@@ -1,28 +1,22 @@
-interface MovieType {
+import { useMemo } from 'react';
+
+export interface MovieType {
+  id: number;
   title: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
+  description: string;
+  image: string;
 }
 
-export function createSlug(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
+export const createSlug = (text: string): string => 
+  text.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-export function getMovieBySlug(movies: MovieType[], slug: string): MovieType | undefined {
-  return movies.find(movie => createSlug(movie.title) === slug);
-}
+export const findMovieBySlug = (movies: MovieType[], slug: string): MovieType | undefined => 
+  movies.find(movie => createSlug(movie.title) === slug);
 
-type QueryParams = Record<string, string | number | boolean | undefined>;
-
-export const buildUrl = (baseUrl: string, params: QueryParams): string => {
+export const buildUrl = (baseUrl: string, params: Record<string, any>): string => {
   const url = new URL(baseUrl);
   Object.entries(params).forEach(([key, value]) => {
-    if (value !== undefined) {
-      url.searchParams.append(key, String(value));
-    }
+    if (value !== undefined) url.searchParams.append(key, String(value));
   });
   return url.toString();
 };

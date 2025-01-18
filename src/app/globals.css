@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000212;
+  --foreground: #fafafa;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +19,15 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: 
+    radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 97% 21%, hsla(256, 98%, 72%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.15) 0px, transparent 50%);
+  font-family: var(--font-geist-sans);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -62,4 +72,53 @@ body {
 .text-shadow-glow {
   text-shadow: 0 0 20px rgba(192, 132, 252, 0.2),
               0 0 40px rgba(192, 132, 252, 0.1);
+}
+
+.gradient-border {
+  --borderWidth: 1px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    rgba(121, 68, 154, 0.5),
+    rgba(49, 68, 154, 0.5)
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animateGlow 3s ease infinite;
+}
+
+@keyframes animateGlow {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.3; }
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-gradient-to-b from-white/[0.12] to-white/[0.06] 
+         shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] rounded-2xl;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-[0_0_50px_-12px_rgba(255,255,255,0.3)];
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
