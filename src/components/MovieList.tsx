@@ -12,6 +12,11 @@ interface MovieListProps {
 export default function MovieList({ movies }: MovieListProps) {
   const router = useRouter();
 
+  // Use consistent path format
+  const handleMovieClick = (title: string) => {
+    router.push(`/movie/${createSlug(title)}`);
+  };
+
   if (!movies?.length) {
     return <p className="text-center text-gray-500">No movies available</p>;
   }
@@ -25,45 +30,46 @@ export default function MovieList({ movies }: MovieListProps) {
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
       {movies.map((movie) => (
         <div
           key={movie.id}
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden 
-            transition-transform duration-200 hover:scale-105 cursor-pointer max-w-[280px]"
-          onClick={() => router.push(`/movie/${createSlug(movie.title)}`)}
+          onClick={() => handleMovieClick(movie.title)}
+          className="group glass-card hover-glow animate-float cursor-pointer 
+                   transform transition-all duration-500 hover:-translate-y-2"
         >
-          <div className="relative h-[400px]">
+          <div className="relative aspect-[2/3] overflow-hidden rounded-t-2xl">
             {movie.image ? (
               <Image
                 src={movie.image}
                 alt={movie.title}
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                className="object-cover rounded-t-lg"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 priority={movie.id <= 4}
               />
             ) : (
-              <div className="flex items-center justify-center h-full bg-gray-100 dark:bg-gray-700 rounded-t-lg">
-                <ImageOff className="w-8 h-8 text-gray-400" />
+              <div className="flex items-center justify-center h-full bg-black/50">
+                <ImageOff className="w-12 h-12 text-gray-400" />
               </div>
             )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+              <div className="flex items-center gap-2 text-yellow-400 mb-2">
+                <Star className="h-5 w-5 fill-yellow-400" />
+                <span className="text-lg font-bold">{movie.rating.toFixed(1)}</span>
+              </div>
+              <p className="text-white/90 text-sm line-clamp-3">{movie.description}</p>
+            </div>
           </div>
-          <div className="p-3">
-            <h3 className="font-medium text-sm mb-1 text-gray-900 dark:text-white line-clamp-1">
+          
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2 text-white/90 group-hover:text-blue-400 transition-colors duration-300">
               {movie.title}
             </h3>
-            <div className="flex items-center gap-3">
-              <Star className="h-3 w-3 text-yellow-500 fill-yellow-500" />
-              <span className="text-xs text-gray-600 dark:text-gray-300">
-                {movie.rating}/10
-              </span>
-            </div>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 line-clamp-3">
-              {movie.description}
-            </p>
-            <div className="text-xs text-gray-400 dark:text-gray-500">
-              Release: {formatDate(movie.releaseDate)}
+            <div className="text-sm text-blue-400/80 font-medium">
+              {formatDate(movie.releaseDate)}
             </div>
           </div>
         </div>
